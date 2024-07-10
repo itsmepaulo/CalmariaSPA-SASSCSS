@@ -1,0 +1,13 @@
+@mixin margem-central($width){
+    margin: 0 auto;
+    width: $width;
+}
+
+@mixin ff-fs-cl($f-family, $f-size, $f-color){
+    font-family: $f-family;
+    font-size: $f-size;
+    color: $f-color;
+
+}
+
+/* O mixin é como se fosse uma função, nesse caso vamos adicionamos a centralização das seções. Os parâmetros dentro dos parenteses são as variáveis que são definidas. */

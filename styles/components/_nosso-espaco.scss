@@ -1,0 +1,51 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#nosso-espaco {
+    @include mixins.margem-central(80%);
+    
+    .detalhes {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem 0;
+        .imgs-espaco {
+            max-width: 500px;
+
+            .imgs-espaco {
+                width: 100%;
+
+            }
+        }
+
+        .espaco-textos {
+            @extend .imgs-espaco;
+            
+            .separador{
+                width: 100%;
+            }
+            
+            .titulo {
+                @include mixins.ff-fs-cl(var(--titulos), 1.938rem, var(--roxo-vibrante));
+                font-weight: 400;
+            }
+
+            .infos {
+                @include mixins.ff-fs-cl(var(--textos), 1.375rem, var(--cor-primaria));
+                font-weight: 400;
+            }
+
+        }
+
+        
+
+    }
+
+    .detalhes:nth-child(2) {    
+        flex-direction: row-reverse;
+
+    }
+
+}

@@ -1,0 +1,45 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+
+#desconto{
+    display: flex;
+    justify-content: space-between;
+
+    .desconto-form{
+        h4{
+            @include mixins.ff-fs-cl(var(--titulos), 1.938rem, var(--cor-primaria));
+            text-align: center
+        }
+        p{
+            @include mixins.ff-fs-cl(var(--textos), 1.375, var(--cor-primaria));
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .input-btn{
+            display: flex;
+            justify-content: center;
+            max-width: 790px;
+            input{
+                height: 50px;
+                width: 70%;
+                border-radius: 36px 0 0 36px;
+                border: solid grey 1px;
+                font-size: 2rem;
+            }
+
+            button{
+                @include mixins.ff-fs-cl(var(--textos), 1.375rem, white);
+                font-weight: 600;
+                width: 30%;
+                border:none;
+                cursor: pointer;
+                background-color: var(--roxo-vibrante);
+                border-radius: 0 32px 32px 0 ;
+            }
+        }
+    }
+
+
+}

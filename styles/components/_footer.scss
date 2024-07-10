@@ -1,0 +1,10 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+footer{
+    padding: 24px;
+    text-align: center;
+    @include mixins.ff-fs-cl(var(--textos), 0.938rem, var(--cor-primaria));
+    background-color: #E8F5C8;
+   
+}
